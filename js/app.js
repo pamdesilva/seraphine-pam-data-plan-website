@@ -43,7 +43,6 @@ function displayLoneWolfTotal(price, type) {
   $("#lone-wolf-plan-total").html("Total: £" + loneWolfTotal);
 }
 
-
 ////////////////////////////// Chatterbox page ////////////////////////////////////
 
 var chatterboxSelectedGB;
@@ -101,3 +100,81 @@ function displayChatterboxTotal(gb, min, type) {
 
   $("#chatterbox-plan-total").html("Total: £" + chatterboxTotal);
 }
+
+////////////////////////////// Family page ////////////////////////////////////
+
+var familySimNumber;
+var pricesToDisplay = [];
+var familySelectedPrice;
+var familyTotal;
+var familyMonthly = true;
+var priceTiers = [
+  [14, 20, 30, 40],
+  [21.2, 32, 50, 68],
+  [28.4, 44, 70, 96],
+  [35.6, 56, 90, 124],
+  [42.8, 68, 110, 152]
+];
+
+$('.family-sim-number').click(function(e){
+  e.preventDefault();
+  familySimNumber = $(this).data('price');
+  console.log(familySimNumber);
+
+  // pricesToDisplay = priceTiers.slice(0).splice(0, 5)[familySimNumber - 1];
+  pricesToDisplay = priceTiers.slice(0)[familySimNumber - 1];
+
+  console.log(priceTiers.slice(0)[familySimNumber - 1]);
+});
+
+// $(".family-sim-no").click(function() {
+//   familyTotalDisplay.html("");
+//   console.log(this.value);
+//   familySimCount = this.value;
+//   console.log("Number of sims: " + familySimCount);
+//
+//   pricesToDisplay = priceTiers.slice(0).splice(0, 5)[familySimCount - 1];
+//
+//   console.log("We will display: " + pricesToDisplay);
+//
+//   pricesToDisplay.forEach(function(value, i) {
+//     let price = $(".family-price-label")[i];
+//     $(price).html("£" + value.toFixed(2));
+//
+//     let priceData = $(".family-plan")[i];
+//     $(priceData).attr("data-value", value);
+//   });
+// });
+//
+// $(".family-plan").click(function(e) {
+//   e.preventDefault();
+//
+//   familyPlanAmount =
+//     $(this)
+//       .find("span")
+//       .text()
+//       .slice(1, 5) * 1;
+//
+//   if (frequencyMonthly) {
+//     familyTotalDisplay.html("£" + familyPlanAmount);
+//   } else {
+//     familyTotalDisplay.html("£" + familyPlanAmount * 12);
+//   }
+// });
+//
+// $(".family-frequency").click(function(e) {
+//   e.preventDefault();
+//   console.log("The frequency is " + $(this).data("value"));
+//   if ($(this).data("value") === "annual") {
+//     frequencyMonthly = false;
+//     familyTotal = calculateTotal(familyPlanAmount, 12);
+//     console.log("Annual is " + familyTotal);
+//   } else {
+//     frequencyMonthly = true;
+//     familyTotal = familyPlanAmount;
+//     console.log("Monthly is " + familyTotal);
+//   }
+//
+//   familyTotalDisplay.html("£" + familyTotal);
+// });
+// });

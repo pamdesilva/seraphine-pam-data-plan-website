@@ -1,0 +1,164 @@
+﻿
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <title>Panda - Family</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Panda</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">Family</h1>
+        <p class="lead">Sim card with data, minutes and texts</p>
+        <hr class="my-4">
+      </div>
+    </div>
+  </header>
+
+
+  <section id="family-sim-section" class="mt-5">
+    <div class="container text-center">
+      <h2>How many sim cards do you need?</h2>
+      <div class="row">
+        <div class="col">
+          <input type="button" class="family-sim-number" value="1" data-price="1" />
+          <input type="button" class="family-sim-number" value="2" data-price="2" />
+          <input type="button" class="family-sim-number" value="3" data-price="3" />
+          <input type="button" class="family-sim-number" value="4" data-price="4" />
+          <input type="button" class="family-sim-number" value="5"
+          data-price="5" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="family-gb-section" class="mt-5 text-center">
+    <div class="container">
+      <h2>How many GB do you need per month?</h2>
+      <div class="row">
+        <div class="col">
+          <div class="card family-gb" data-price="14" data-gb="1">
+            <div class="card-body">
+              <p class="card-text">1GB</p>
+              <h5 class="card-title">£14</h5>
+              <a href="#" class="btn btn-primary">Select</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card family-gb" data-price="20" data-gb="10">
+            <div class="card-body">
+              <p class="card-text">10GB</p>
+              <h5 class="card-title">£20</h5>
+              <a href="#" class="btn btn-primary">Select</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row  mt-5">
+        <div class="col">
+          <div class="card family-gb" data-price="30" data-gb="20">
+            <div class="card-body">
+              <p class="card-text">20GB</p>
+              <h5 class="card-title">£30</h5>
+              <a href="#" class="btn btn-primary">Select</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card family-gb" data-price="40" data-gb="40">
+            <div class="card-body">
+              <p class="card-text">40GB</p>
+              <h5 class="card-title">£40</h5>
+              <a href="#" class="btn btn-primary">Select</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="plan-frequency" class="m-5">
+    <div class="container text-center">
+      <h2>How long is your plan for?</h2>
+      <div class="row">
+        <div class="col-lg">
+          <button type="button" class="btn family-frequency btn-primary" name="button" disabled>Monthly</button>
+        </div>
+        <div class="col-lg">
+          <button type="button" class="btn family-frequency" name="button" disabled>Annually</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="family-total-section">
+    <div class="container text-center">
+      <p><span id="family-plan-type"></span> plan</p>
+      <h3 id="family-plan-total"></h3>
+      <button type="button" class="btn" name="button">Buy now</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+        </div>
+        <div class="col-lg">
+          <a href="#">Privacy</a>
+          <a href="#">Terms of use</a>
+          <a href="#">Sitemap</a></a>
+        </div>
+      </div>
+  </footer>
+
+  <div class="row" id="copyright">
+    <div class="col text-center">
+      <p>©2018 Seraphine & Pam</p>
+    </div>
+  </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
