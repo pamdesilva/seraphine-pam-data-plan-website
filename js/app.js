@@ -1,101 +1,103 @@
-
 ////////////////////////////// Lone wolf page ////////////////////////////////////
 
-  $('#lone-wolf-total-section').hide();
+$('#lone-wolf-total-section').hide();
 
-  var loneWolfSelectedPrice;
-  var loneWolfTotal;
-  var loneWolfMonthly = true;
-  var loneWolfPlanType;
+var loneWolfSelectedPrice;
+var loneWolfTotal;
+var loneWolfMonthly = true;
 
-  $('.lone-wolf-card').click(function(e){
-    e.preventDefault();
-    loneWolfSelectedPrice = $(this).data('value');
+$('.lone-wolf-card').click(function(e) {
+  e.preventDefault();
+  loneWolfSelectedPrice = $(this).data('value');
+  $('.lone-wolf-frequency').removeAttr('disabled');
 
-    if(loneWolfMonthly == true) {
-      loneWolfTotal = loneWolfSelectedPrice;
-      loneWolfPlanType = "monthly";
-    } else {
-      loneWolfTotal = loneWolfSelectedPrice * 12;
-      loneWolfPlanType = "annual";
-    }
+  displayLoneWolfTotal(loneWolfSelectedPrice, loneWolfMonthly);
 
-    $('.lone-wolf-frequency').removeAttr('disabled');
-    $("#lone-wolf-plan-total").html("Total: £" + loneWolfTotal);
-    $("#lone-wolf-plan-type").html(loneWolfPlanType);
-    $('#lone-wolf-total-section').show();
-  });
+  $('#lone-wolf-total-section').show();
+});
 
-  $('.lone-wolf-frequency').click(function(e){
-    e.preventDefault();
+$('.lone-wolf-frequency').click(function(e) {
+  e.preventDefault();
+  var btnType = $(this).text().toLowerCase();
 
-    var btnType = $(this).text().toLowerCase();
+  if (btnType === 'annually') {
+    loneWolfMonthly = false;
+    displayLoneWolfTotal(loneWolfSelectedPrice, loneWolfMonthly);
+  } else {
+    loneWolfMonthly = true;
+    displayLoneWolfTotal(loneWolfSelectedPrice, loneWolfMonthly);
+  }
 
-    if (btnType === 'annually') {
-      loneWolfMonthly = false;
-      loneWolfTotal = loneWolfSelectedPrice * 12;
-      loneWolfPlanType = "annual";
-    }
-     else {
-      loneWolfTotal = loneWolfSelectedPrice;
-      loneWolfPlanType = "monthly";
-    }
-    $("#lone-wolf-plan-total").html("Total: £" + loneWolfTotal);
-    $("#lone-wolf-plan-type").html(loneWolfPlanType);
+});
 
-  });
+function displayLoneWolfTotal(price, type) {
+
+  if (loneWolfMonthly == true) {
+    loneWolfTotal = price;
+    $("#lone-wolf-plan-type").html("Monthly");
+  } else {
+    loneWolfTotal= price * 12;
+    $("#lone-wolf-plan-type").html("Annual");
+  }
+
+  $("#lone-wolf-plan-total").html("Total: £" + loneWolfTotal);
+}
 
 
 ////////////////////////////// Chatterbox page ////////////////////////////////////
 
 var chatterboxSelectedGB;
 var chatterboxSelectedMin;
-var chattterboxPlanType;
 var chatterboxTotal;
 var chatterboxMonthly = true;
 
 $('#chatterbox-total-section').hide();
 
-
-$(".chatterbox-gb").click(function(e){
+$(".chatterbox-gb").click(function(e) {
   e.preventDefault();
   chatterboxSelectedGB = $(this).data("price");
   $('.chatterbox-min').removeAttr('disabled');
+
+  if (chatterboxSelectedMin) {
+    displayChatterboxTotal(chatterboxSelectedGB, chatterboxSelectedMin, chatterboxMonthly);
+  }
 });
 
-
-$(".chatterbox-min").click(function(e){
+$(".chatterbox-min").click(function(e) {
   e.preventDefault();
   chatterboxSelectedMin = $(this).data("price");
   $('.chatterbox-frequency').removeAttr('disabled');
 
-  var total = chatterboxSelectedMin + chatterboxSelectedGB;
+  displayChatterboxTotal(chatterboxSelectedGB, chatterboxSelectedMin, chatterboxMonthly);
 
-  console.log(total);
-
-  if(chatterboxMonthly == true) {
-    chatterboxTotal = total;
-    chatterboxPlanType = "monthly";
-  } else {
-    chatterboxTotal = total * 12;
-    chatterboxPlanType = "annual";
-  }
-
-  console.log('Total: ' + chatterboxTotal);
-
-  $("#chatterbox-plan-total").html("Total: £" + chatterboxTotal);
   $('#chatterbox-total-section').show();
 
 });
 
-// function calculateChatterboxTotal(gb, min, type) {
-//   var total = gb + min;
-//
-//   if(type = "annual") {
-//     chatterboxTotal = total * 12;
-//   } else {
-//     chatterboxTotal = total;
-//   }
-//
-//
-// }
+$('.chatterbox-frequency').click(function(e) {
+  e.preventDefault();
+
+  var btnType = $(this).text().toLowerCase();
+
+  if (btnType === 'annually') {
+    chatterboxMonthly = false;
+    displayChatterboxTotal(chatterboxSelectedGB, chatterboxSelectedMin, chatterboxMonthly);
+  } else {
+    chatterboxMonthly = true;
+    displayChatterboxTotal(chatterboxSelectedGB, chatterboxSelectedMin, chatterboxMonthly);
+  }
+});
+
+function displayChatterboxTotal(gb, min, type) {
+  var total = gb + min;
+
+  if (chatterboxMonthly == true) {
+    chatterboxTotal = total;
+    $("#chatterbox-plan-type").html("Monthly");
+  } else {
+    chatterboxTotal = total * 12;
+    $("#chatterbox-plan-type").html("Annual");
+  }
+
+  $("#chatterbox-plan-total").html("Total: £" + chatterboxTotal);
+}
