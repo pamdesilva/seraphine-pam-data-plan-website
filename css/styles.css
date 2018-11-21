@@ -6,7 +6,8 @@ footer {
 }
 
 
-#lone-wolf-total-section {
+#lone-wolf-total-section,
+#chatterbox-total-section {
   background: #333;
   padding: 3rem 0;
   color: white;
