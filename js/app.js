@@ -1,7 +1,6 @@
 
   $('#lone-wolf-total-section').hide();
 
-
   var loneWolfSelectedPrice;
   var loneWolfTotal;
   var monthly = true;
@@ -16,6 +15,7 @@
       loneWolfTotal = loneWolfSelectedPrice * 12;
     }
 
+    $('.lone-wolf-frequency').removeAttr('disabled');
     $("#lone-wolf-plan-total").html("Total: £" + loneWolfTotal);
     $('#lone-wolf-total-section').show();
   });
