@@ -1,36 +1,37 @@
-//////// Lone wolf page
 
-var loneWolfSelectedPrice;
-var loneWolfTotal;
-var monthly = true;
+  $('#lone-wolf-total-section').hide();
 
-$('.lone-wolf-card').click(function(e){
-  e.preventDefault();
-  loneWolfSelectedPrice = $(this).data('value');
 
-  if(monthly == true) {
-    loneWolfTotal = loneWolfSelectedPrice;
-  } else {
-    loneWolfTotal = loneWolfSelectedPrice * 12;
-  }
+  var loneWolfSelectedPrice;
+  var loneWolfTotal;
+  var monthly = true;
 
-  $("#lone-wolf-plan-total").html("Total: £" + loneWolfTotal);
+  $('.lone-wolf-card').click(function(e){
+    e.preventDefault();
+    loneWolfSelectedPrice = $(this).data('value');
 
-});
+    if(monthly == true) {
+      loneWolfTotal = loneWolfSelectedPrice;
+    } else {
+      loneWolfTotal = loneWolfSelectedPrice * 12;
+    }
 
-$('.lone-wolf-frequency').click(function(e){
-  e.preventDefault();
+    $("#lone-wolf-plan-total").html("Total: £" + loneWolfTotal);
+    $('#lone-wolf-total-section').show();
+  });
 
-  var btnType = $(this).text().toLowerCase();
+  $('.lone-wolf-frequency').click(function(e){
+    e.preventDefault();
 
-  if (btnType === 'annually') {
-    monthly = false;
-    loneWolfTotal = loneWolfSelectedPrice * 12;
-  } else {
-    monthly = true;
-    loneWolfTotal = loneWolfSelectedPrice;
-  }
+    var btnType = $(this).text().toLowerCase();
 
-  $("#lone-wolf-plan-total").html("Total: £" + loneWolfTotal);
+    if (btnType === 'annually') {
+      monthly = false;
+      loneWolfTotal = loneWolfSelectedPrice * 12;
+    }
+     else {
+      loneWolfTotal = loneWolfSelectedPrice;
+    }
+    $("#lone-wolf-plan-total").html("Total: £" + loneWolfTotal);
 
-});
+  });
