@@ -124,8 +124,19 @@ $('.family-sim-number').click(function(e){
   // pricesToDisplay = priceTiers.slice(0).splice(0, 5)[familySimNumber - 1];
   pricesToDisplay = priceTiers.slice(0)[familySimNumber - 1];
 
-  console.log(priceTiers.slice(0)[familySimNumber - 1]);
+  pricesToDisplay.forEach(function(value, index) {
+    var price = $('.family-gb-price')[index];
+    $(price).html('£' + value.toFixed(2));
+
+    var gbPrice = $(".family-gb")[index];
+    $(gbPrice).attr("data-price", value)
+  });
 });
+
+
+
+
+
 
 // $(".family-sim-no").click(function() {
 //   familyTotalDisplay.html("");
@@ -153,7 +164,7 @@ $('.family-sim-number').click(function(e){
 //     $(this)
 //       .find("span")
 //       .text()
-//       .slice(1, 5) * 1;
+//       .slidace(1, 5) * 1;
 //
 //   if (frequencyMonthly) {
 //     familyTotalDisplay.html("£" + familyPlanAmount);
