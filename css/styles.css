@@ -6,7 +6,6 @@
 /* Light grey: #e9ecef */
 /* Purple: #671179 */
 /* Yellow: #e1ff39 */
-
 /************************** Global Styles ************************************/
 body {
   color: #212529;
@@ -86,18 +85,18 @@ footer {
 }
 
 #other-plans {
- background: #e9ecef;
- padding: 3rem 0;
+  background: #e9ecef;
+  padding: 3rem 0;
 }
 
 #other-plans h4 {
- margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 #other-plans a {
- font-size: 1.5rem;
- color: #671179;
- font-weight: bold;
+  font-size: 1.5rem;
+  color: #671179;
+  font-weight: bold;
 }
 
 #lone-wolf-gb-section h5,
@@ -119,6 +118,7 @@ footer {
 }
 
 @media screen and (min-width: 580px) {
+
   #lone-wolf-gb-section h5,
   #chatterbox-gb-section h5,
   #chatterbox-gb-section h5 {
@@ -143,7 +143,6 @@ footer {
   .plan-icon {
     width: 6rem;
   }
-
 }
 
 #lone-wolf-pink-btn,
@@ -207,9 +206,9 @@ footer {
 }
 
 .frequency-btn {
-  color:  #212529;
+  color: #212529;
   background: #fff;
-  border: 2px solid  #212529;
+  border: 2px solid #212529;
   border-radius: 2rem;
   padding: 0.3rem 5rem;
   font-size: 2rem;
@@ -232,23 +231,44 @@ footer {
   border: none;
 }
 
-.active-card {
-  background: #e1ff39;
-  color: #212529;
+#chatterbox-mins-section h2 {
+  margin: 3rem 0;
 }
 
 .chatterbox-min {
-  background: tomato;
-  margin: 0.5rem 1.8rem;
-  padding: 1.9rem;
+  background: #30dccd;
+  margin-bottom: 1rem;
   border-radius: 10px;
+  padding: 1rem;
 }
 
 .chatterbox-min .btn {
   background: #212529;
-  color: tomato;
+  color: #30dccd;
+  font-weight: bold;
 }
 
 .chatterbox-min p {
   font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.chatterbox-min h5 {
+  font-size: 1.5rem;
+}
+
+.family-sim-number {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+  background: #212529;
+  border: none;
+  font-size: 3rem;
+  color: #fff;
+  margin: 0.5rem;
+}
+
+.active {
+  background: #e1ff39;
+  color: #212529;
 }
