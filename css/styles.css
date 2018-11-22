@@ -5,6 +5,7 @@
 /* Nav & footer: #212529 */
 /* Light grey: #e9ecef */
 /* Purple: #671179 */
+/* Yellow: #e1ff39 */
 
 /************************** Global Styles ************************************/
 body {
@@ -69,13 +70,15 @@ footer {
 }
 
 /************************** LoneWolf page ************************************/
-#lone-wolf-gb-section .lone-wolf-card {
+#lone-wolf-gb-section .lone-wolf-card,
+#chatterbox-gb-section .chatterbox-gb {
   background: #212529;
   color: #fff;
   width: auto;
 }
 
 #lone-wolf-gb-section h2,
+#chatterbox-gb-section h2,
 #other-plans {
   margin: 3rem 0;
 }
@@ -95,28 +98,34 @@ footer {
  font-weight: bold;
 }
 
-#lone-wolf-gb-section h5 {
+#lone-wolf-gb-section h5,
+#chatterbox-gb-section h5 {
   font-size: 1.5rem;
 }
 
-#lone-wolf-gb-section p {
+#lone-wolf-gb-section p,
+#chatterbox-gb-section p {
   font-size: 1.8rem;
 }
 
-#lone-wolf-gb-section .btn {
+#lone-wolf-gb-section .btn,
+#chatterbox-gb-section .btn {
   font-weight: bold;
 }
 
 @media screen and (min-width: 580px) {
-  #lone-wolf-gb-section h5 {
+  #lone-wolf-gb-section h5,
+  #chatterbox-gb-section h5 {
     font-size: 2rem;
   }
 
-  #lone-wolf-gb-section p {
+  #lone-wolf-gb-section p,
+  #chatterbox-gb-section p {
     font-size: 2.8rem;
   }
 
-  #lone-wolf-gb-section .btn {
+  #lone-wolf-gb-section .btn,
+  #chatterbox-gb-section .btn {
     padding: 0.8rem 2.5rem;
     font-weight: bold;
     font-size: 1.3rem;
@@ -129,36 +138,46 @@ footer {
 
 }
 
-#lone-wolf-pink-btn {
+#lone-wolf-pink-btn,
+#chatterbox-pink-btn {
   background: #E632A5;
 }
 
-#lone-wolf-pear-btn {
+#lone-wolf-pear-btn,
+#chatterbox-pear-btn {
   background: #CAE02A;
 }
 
-#lone-wolf-teal-btn {
+#lone-wolf-teal-btn,
+#chatterbox-teal-btn {
   background: #51AFBF;
 }
 
-#lone-wolf-orange-btn {
+#lone-wolf-orange-btn,
+#chatterbox-orange-btn {
   background: #FF723E;
 }
 
 #lone-wolf-frequency-section,
-#lone-wolf-total-section {
+#lone-wolf-total-section,
+#chatterbox-frequency-section,
+#chatterbox-total-section {
   margin: 4rem 0;
 }
 
-#lone-wolf-frequency-section h2{
+#lone-wolf-frequency-section h2,
+#chatterbox-frequency-section h2 {
   margin-bottom: 2rem;
 }
 
-#lone-wolf-summary-gb {
+#lone-wolf-summary-gb,
+#chatterbox-summary-gb,
+#chatterbox-summary-min {
   font-size: 2rem;
 }
 
-#lone-wolf-plan-total {
+#lone-wolf-plan-total,
+#chatterbox-plan-total {
   font-size: 2.5rem;
 }
 
@@ -190,11 +209,28 @@ footer {
   font-size: 2rem;
 }
 
-#lone-wolf-gb-section .card {
+#lone-wolf-gb-section .card,
+#chatterbox-gb-section .card {
   border: none;
 }
 
-.lone-wolf-active-card {
+.active-card {
   background: #e1ff39;
   color: #212529;
+}
+
+.chatterbox-min {
+  background: tomato;
+  margin: 0.5rem 1.8rem;
+  padding: 1.9rem;
+  border-radius: 10px;
+}
+
+.chatterbox-min .btn {
+  background: #212529;
+  color: tomato;
+}
+
+.chatterbox-min p {
+  font-size: 1.2rem;
 }

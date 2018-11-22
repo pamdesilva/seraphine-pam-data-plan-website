@@ -65,6 +65,10 @@ var chatterboxMonthly = true;
 
 $(".chatterbox-gb").click(function(e) {
   e.preventDefault();
+
+  $('.card-body').removeClass('active-card');
+  $(this).find('.card-body').addClass("active-card");
+
   $("#chatterbox-mins-section")
     .removeClass("hide")
     .addClass("show");
@@ -115,8 +119,12 @@ $(".chatterbox-frequency").click(function(e) {
 
   if (btnType === "annually") {
     chatterboxMonthly = false;
+    $(this).addClass('frequency-active');
+    $('#frequency-monthly').removeClass('frequency-active');
   } else {
     chatterboxMonthly = true;
+    $('#frequency-monthly').addClass('frequency-active');
+    $('#frequency-annual').removeClass('frequency-active');
   }
 
   displayChatterboxTotal(
@@ -131,10 +139,10 @@ function displayChatterboxTotal(gb, min, type) {
 
   if (chatterboxMonthly == true) {
     chatterboxTotal = total;
-    $("#chatterbox-plan-type").html("Monthly");
+    $("#chatterbox-plan-type").html("Monthly plan");
   } else {
     chatterboxTotal = total * 12;
-    $("#chatterbox-plan-type").html("Annual");
+    $("#chatterbox-plan-type").html("Annual plan");
   }
 
   $("#chatterbox-plan-total").html("Total: £" + chatterboxTotal);
