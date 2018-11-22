@@ -63,7 +63,7 @@
   </section>
 
   <section id="family-gb-section" class="hide">
-    <div class="container">
+    <div class="container text-center">
       <h2>How many GB do you need per month?</h2>
       <div class="row">
         <div class="col">
@@ -71,7 +71,7 @@
             <div class="card-body">
               <p class="card-text">1GB</p>
               <h5 class="card-title family-gb-price">£14.00</h5>
-              <a href="#" class="btn btn-primary">Select</a>
+              <a href="#" class="btn btn-primary" id="family-pink-btn">Select</a>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@
             <div class="card-body">
               <p class="card-text">10GB</p>
               <h5 class="card-title family-gb-price">£20.00</h5>
-              <a href="#" class="btn btn-primary">Select</a>
+              <a href="#" class="btn btn-primary" id="family-pear-btn">Select</a>
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@
             <div class="card-body">
               <p class="card-text">20GB</p>
               <h5 class="card-title family-gb-price">£30.00</h5>
-              <a href="#" class="btn btn-primary">Select</a>
+              <a href="#" class="btn btn-primary" id="family-teal-btn">Select</a>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
             <div class="card-body">
               <p class="card-text">40GB</p>
               <h5 class="card-title family-gb-price">£40.00</h5>
-              <a href="#" class="btn btn-primary">Select</a>
+              <a href="#" class="btn btn-primary" id="family-orange-btn">Select</a>
             </div>
           </div>
         </div>
@@ -119,10 +119,10 @@
       <h2>Plan duration</h2>
       <div class="row">
         <div class="col-lg">
-          <button type="button" class="btn family-frequency btn-primary" name="button">Monthly</button>
+          <button type="button" class="btn family-frequency frequency-btn frequency-active" name="button" id="frequency-monthly">Monthly</button>
         </div>
         <div class="col-lg">
-          <button type="button" class="btn family-frequency" name="button">Annually</button>
+          <button type="button" class="btn family-frequency frequency-btn" name="button" id="frequency-annual">Annually</button>
         </div>
       </div>
     </div>
@@ -130,27 +130,27 @@
 
   <section id="family-total-section" class="hide">
     <div class="container text-center">
-      <p id="family-plan-type"></p>
+      <p id="family-plan-type" class="frequency-type"></p>
       <p id="family-plan-gb"></p>
       <h3 id="family-plan-total"></h3>
-      <button id="buy-btn" type="button" class="btn" name="button">Buy now</button>
+      <button id="buy-btn" type="button" class="btn buy-btn" name="button">Buy now</button>
     </div>
   </section>
 
   <section id="other-plans">
-    <div class="container">
-      <h3>Check out other Panda plans</h3>
+    <div class="container text-center">
+      <h4>Check out other Panda plans</h4>
       <div class="row">
         <div class="col">
-          <p>Need data only?</p>
           <a href="lone-wolf.html">
-            Lone Wolf Plan
+            <p>Lone Wolf</p>
+            <img class="plan-icon" src="images/lone-wolf.png" alt='Paw icon.' />
           </a>
         </div>
         <div class="col">
-          <p>Need fewer data & minutes?</p>
           <a href="chatterbox.html">
-            Chatterbox Plan
+            <p>Chatterbox</p>
+            <img class="plan-icon" src="images/chatterbox.png" alt='Chat icon.' />
           </a>
         </div>
       </div>

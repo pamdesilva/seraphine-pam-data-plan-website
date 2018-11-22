@@ -10,8 +10,8 @@ $(".lone-wolf-card").click(function(e) {
   loneWolfSelectedPrice = $(this).data("value");
   loneWolfSelectedGb = $(this).find("p").text();
 
-  $('.card-body').removeClass('lone-wolf-active-card');
-  $(this).find('.card-body').addClass("lone-wolf-active-card");
+  $('.card-body').removeClass('active-card');
+  $(this).find('.card-body').addClass("active-card");
 
   displayLoneWolfTotal(loneWolfSelectedPrice, loneWolfMonthly);
   $("#lone-wolf-frequency-section")
@@ -197,6 +197,8 @@ $(".family-sim-number").click(function(e) {
 
 $(".family-gb").click(function(e) {
   e.preventDefault();
+  $('.card-body').removeClass('active-card');
+  $(this).find('.card-body').addClass("active-card");
   $("#family-frequency-section")
     .removeClass("hide")
     .addClass("show");
@@ -228,8 +230,12 @@ $(".family-frequency").click(function(e) {
 
   if (btnType === "monthly") {
     familyMonthly = true;
+    $(this).addClass('frequency-active');
+    $('#frequency-annual').removeClass('frequency-active');
   } else {
     familyMonthly = false;
+    $('#frequency-annual').addClass('frequency-active');
+    $('#frequency-monthly').removeClass('frequency-active');
   }
 
   displayFamilyTotal(familySelectedPrice, familyMonthly, familySelectedGb);
