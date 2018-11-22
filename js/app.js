@@ -1,12 +1,14 @@
 ////////////////////////////// Lone wolf page ////////////////////////////////////
 
 var loneWolfSelectedPrice;
+var loneWolfSelectedGb;
 var loneWolfTotal;
 var loneWolfMonthly = true;
 
 $(".lone-wolf-card").click(function(e) {
   e.preventDefault();
   loneWolfSelectedPrice = $(this).data("value");
+  loneWolfSelectedGb = $(this).find("p").text();
 
   displayLoneWolfTotal(loneWolfSelectedPrice, loneWolfMonthly);
   $("#lone-wolf-frequency-section")
@@ -41,6 +43,7 @@ function displayLoneWolfTotal(price, type) {
     $("#lone-wolf-plan-type").html("Annual");
   }
 
+  $("#lone-wolf-summary-gb").html(loneWolfSelectedGb);
   $("#lone-wolf-plan-total").html("Total: £" + loneWolfTotal);
 }
 
