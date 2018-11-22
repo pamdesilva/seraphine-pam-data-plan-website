@@ -11,6 +11,10 @@ body {
   color: #212529;
 }
 
+a {
+  color: #fff;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -19,12 +23,16 @@ a:hover {
   border: none;
 }
 
-footer {
-  background: #212529;
-  color: white;
-  height: 8rem;
-  margin-top: 2rem;
-  padding-top: 2rem;
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none !important;
+}
+
+
+input:active,
+input:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
 }
 
 #lone-wolf-total-section,
@@ -56,6 +64,15 @@ footer {
   font-size: 1.1rem;
 }
 
+#home-plans-section a {
+  color: #212529;
+}
+
+#home-plans-section .card {
+ margin-bottom: 1rem;
+ border: 1px solid #bbc1c5;
+}
+
 #home-lone-wolf-btn {
   background: #E632A5;
 }
@@ -66,6 +83,17 @@ footer {
 
 #home-family-btn {
   background: #CAE02A;
+}
+
+.jumbotron {
+  min-height: 500px;
+  padding: 3em 0;
+  margin: 0;
+  margin-bottom: 4rem;
+  border-bottom: 5px solid #E0E0CE;
+  background: linear-gradient(0deg, rgba(15, 15, 15, 0.53125) 0%, rgba(253, 187, 45, 0.5) 100%), url(../images/panda-background.jpg) no-repeat 50%;
+  background-size: cover;
+  color: #E0E0CE;
 }
 
 /************************** LoneWolf page ************************************/
@@ -271,4 +299,30 @@ footer {
 .active {
   background: #e1ff39;
   color: #212529;
+}
+
+footer {
+  background: #212529;
+  color: white;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.fab {
+  font-size: 3rem;
+  color: #fff;
+  margin: 0 1.5rem;
+}
+
+.legal {
+  margin: 1rem 0;
+}
+
+.legal a {
+  margin: 0 0.5rem;
+}
+
+#copyright {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
