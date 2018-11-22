@@ -10,6 +10,9 @@ $(".lone-wolf-card").click(function(e) {
   loneWolfSelectedPrice = $(this).data("value");
   loneWolfSelectedGb = $(this).find("p").text();
 
+  $('.card-body').removeClass('lone-wolf-active-card');
+  $(this).find('.card-body').addClass("lone-wolf-active-card");
+
   displayLoneWolfTotal(loneWolfSelectedPrice, loneWolfMonthly);
   $("#lone-wolf-frequency-section")
     .removeClass("hide")
@@ -27,8 +30,12 @@ $(".lone-wolf-frequency").click(function(e) {
 
   if (btnType === "annually") {
     loneWolfMonthly = false;
+    $(this).addClass('frequency-active');
+    $('#frequency-monthly').removeClass('frequency-active');
   } else {
     loneWolfMonthly = true;
+    $('#frequency-monthly').addClass('frequency-active');
+    $('#frequency-annual').removeClass('frequency-active');
   }
 
   displayLoneWolfTotal(loneWolfSelectedPrice, loneWolfMonthly);

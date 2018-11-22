@@ -7,14 +7,12 @@
 /* Purple: #671179 */
 
 /************************** Global Styles ************************************/
-body,
-a {
+body {
   color: #212529;
 }
 
 a:hover {
   text-decoration: none;
-  color: #212529;
 }
 
 .btn {
@@ -91,6 +89,12 @@ footer {
  margin-bottom: 2rem;
 }
 
+#other-plans a {
+ font-size: 1.5rem;
+ color: #671179;
+ font-weight: bold;
+}
+
 #lone-wolf-gb-section h5 {
   font-size: 1.5rem;
 }
@@ -113,11 +117,16 @@ footer {
   }
 
   #lone-wolf-gb-section .btn {
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 2.5rem;
     font-weight: bold;
     font-size: 1.3rem;
     margin: 0.5rem 0;
   }
+
+  .plan-icon {
+    width: 6rem;
+  }
+
 }
 
 #lone-wolf-pink-btn {
@@ -145,6 +154,23 @@ footer {
   margin-bottom: 2rem;
 }
 
+#lone-wolf-summary-gb {
+  font-size: 2rem;
+}
+
+#lone-wolf-plan-total {
+  font-size: 2.5rem;
+}
+
+.buy-btn {
+  background: #08af08;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  margin-top: 2rem;
+}
+
 .frequency-btn {
   color:  #212529;
   background: #fff;
@@ -156,7 +182,19 @@ footer {
 }
 
 .frequency-active {
-  background: #671179;
-  color: #fff;
+  background: #e1ff39;
   border: none;
+}
+
+.frequency-type {
+  font-size: 2rem;
+}
+
+#lone-wolf-gb-section .card {
+  border: none;
+}
+
+.lone-wolf-active-card {
+  background: #e1ff39;
+  color: #212529;
 }
