@@ -1,7 +1,5 @@
 ////////////////////////////// Lone wolf page ////////////////////////////////////
 
-$('#lone-wolf-total-section').hide();
-
 var loneWolfSelectedPrice;
 var loneWolfTotal;
 var loneWolfMonthly = true;
@@ -9,11 +7,10 @@ var loneWolfMonthly = true;
 $('.lone-wolf-card').click(function(e) {
   e.preventDefault();
   loneWolfSelectedPrice = $(this).data('value');
-  $('.lone-wolf-frequency').removeAttr('disabled');
 
   displayLoneWolfTotal(loneWolfSelectedPrice, loneWolfMonthly);
-
-  $('#lone-wolf-total-section').show();
+  $('#lone-wolf-frequency-section').removeClass('hide').addClass('show');
+  $('#lone-wolf-total-section').removeClass('hide').addClass('show');
 });
 
 $('.lone-wolf-frequency').click(function(e) {
@@ -50,10 +47,9 @@ var chatterboxSelectedMin;
 var chatterboxTotal;
 var chatterboxMonthly = true;
 
-$('#chatterbox-total-section').hide();
-
 $(".chatterbox-gb").click(function(e) {
   e.preventDefault();
+  $('#chatterbox-mins-section').removeClass('hide').addClass('show');
   chatterboxSelectedGB = $(this).data("price");
   $('.chatterbox-min').removeAttr('disabled');
 
@@ -64,8 +60,9 @@ $(".chatterbox-gb").click(function(e) {
 
 $(".chatterbox-min").click(function(e) {
   e.preventDefault();
+  $('#chatterbox-frequency-section').removeClass('hide').addClass('show');
+  $('#chatterbox-total-section').removeClass('hide').addClass('show');
   chatterboxSelectedMin = $(this).data("price");
-  $('.chatterbox-frequency').removeAttr('disabled');
 
   displayChatterboxTotal(chatterboxSelectedGB, chatterboxSelectedMin, chatterboxMonthly);
 
@@ -103,15 +100,12 @@ function displayChatterboxTotal(gb, min, type) {
 
 ////////////////////////////// Family page ////////////////////////////////////
 
-$('#family-total-section').hide();
-// $('#family-gb-section').hide();
-// $('#family-frequency-section').hide();
-
 var familySimNumber;
 var pricesToDisplay = [];
 var familySelectedPrice;
 var familyTotal;
 var familyMonthly = true;
+var lastClickedPrice;
 var priceTiers = [
   [14, 20, 30, 40],
   [21.2, 32, 50, 68],
@@ -123,7 +117,8 @@ var priceTiers = [
 $('.family-sim-number').click(function(e) {
   e.preventDefault();
   familySimNumber = $(this).data('price');
-  $('#family-gb-section').show();
+
+  $('#family-gb-section').removeClass('hide').addClass('show');
 
   pricesToDisplay = priceTiers.slice(0)[familySimNumber - 1];
 
@@ -134,16 +129,20 @@ $('.family-sim-number').click(function(e) {
     var gbPrice = $(".family-gb")[index];
     $(gbPrice).attr("data-price", value)
   });
+
+  if(familySelectedPrice) {
+    console.log($(this).data('price'));
+    displayFamilyTotal(familySelectedPrice, familyMonthly);
+  }
+
 });
 
 $('.family-gb').click(function(e) {
   e.preventDefault();
-  $('#family-frequency-section').show();
-  $('.family-frequency').removeAttr('disabled');
+  $('#family-frequency-section').removeClass('hide').addClass('show');
   familySelectedPrice = $(this).data("price");
   displayFamilyTotal(familySelectedPrice, familyMonthly);
-  $('#family-total-section').show();
-
+  $('#family-total-section').removeClass('hide').addClass('show');
 });
 
 $('.family-frequency').click(function(e) {

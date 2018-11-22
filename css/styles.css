@@ -7,8 +7,17 @@ footer {
 
 
 #lone-wolf-total-section,
-#chatterbox-total-section {
+#chatterbox-total-section,
+#family-total-section{
   background: #333;
   padding: 3rem 0;
   color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
