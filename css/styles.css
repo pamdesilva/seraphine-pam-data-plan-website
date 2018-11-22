@@ -1,10 +1,13 @@
+a {
+  text-decoration: none;
+}
+
 footer {
   background: #ddd;
   height: 8rem;
   margin-top: 2rem;
   padding-top: 2rem;
 }
-
 
 #lone-wolf-total-section,
 #chatterbox-total-section,

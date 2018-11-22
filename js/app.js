@@ -196,10 +196,6 @@ $(".family-gb").click(function(e) {
     .find("p")
     .text();
 
-  console.log(familySelectedGb);
-
-  console.log(familySelectedPrice);
-
   displayFamilyTotal(familySelectedPrice, familyMonthly, familySelectedGb);
   $("#buy-btn").show();
   $("#family-plan-gb").show();
