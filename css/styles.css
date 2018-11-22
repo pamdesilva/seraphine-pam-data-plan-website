@@ -3,6 +3,9 @@
 /* Pear: #CAE02A */
 /* Orange: #FF723E */
 /* Nav & footer: #212529 */
+/* Light grey: #e9ecef */
+/* Purple: #671179 */
+
 /************************** Global Styles ************************************/
 body,
 a {
@@ -29,9 +32,9 @@ footer {
 #lone-wolf-total-section,
 #chatterbox-total-section,
 #family-total-section {
-  background: #333;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   padding: 3rem 0;
-  color: white;
 }
 
 .hide {
@@ -40,6 +43,10 @@ footer {
 
 .show {
   display: block;
+}
+
+.plan-icon {
+  width: 3.5rem;
 }
 
 /************************** Home page ************************************/
@@ -73,6 +80,15 @@ footer {
 #lone-wolf-gb-section h2,
 #other-plans {
   margin: 3rem 0;
+}
+
+#other-plans {
+ background: #e9ecef;
+ padding: 3rem 0;
+}
+
+#other-plans h4 {
+ margin-bottom: 2rem;
 }
 
 #lone-wolf-gb-section h5 {
@@ -118,4 +134,29 @@ footer {
 
 #lone-wolf-orange-btn {
   background: #FF723E;
+}
+
+#lone-wolf-frequency-section,
+#lone-wolf-total-section {
+  margin: 4rem 0;
+}
+
+#lone-wolf-frequency-section h2{
+  margin-bottom: 2rem;
+}
+
+.frequency-btn {
+  color:  #212529;
+  background: #fff;
+  border: 2px solid  #212529;
+  border-radius: 2rem;
+  padding: 0.3rem 5rem;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.frequency-active {
+  background: #671179;
+  color: #fff;
+  border: none;
 }
