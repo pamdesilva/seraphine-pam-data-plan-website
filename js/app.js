@@ -20,6 +20,9 @@ $(".lone-wolf-card").click(function(e) {
   $("#lone-wolf-total-section")
     .removeClass("hide")
     .addClass("show");
+  $("#other-plans")
+    .removeClass("hide")
+    .addClass("show");
 });
 
 $(".lone-wolf-frequency").click(function(e) {
@@ -98,6 +101,9 @@ $(".chatterbox-min").click(function(e) {
     .removeClass("hide")
     .addClass("show");
   $("#chatterbox-total-section")
+    .removeClass("hide")
+    .addClass("show");
+  $("#other-plans")
     .removeClass("hide")
     .addClass("show");
   chatterboxSelectedMin = $(this).data("price");
@@ -208,6 +214,9 @@ $(".family-gb").click(function(e) {
   $('.card-body').removeClass('active');
   $(this).find('.card-body').addClass("active");
   $("#family-frequency-section")
+    .removeClass("hide")
+    .addClass("show");
+  $("#other-plans")
     .removeClass("hide")
     .addClass("show");
 

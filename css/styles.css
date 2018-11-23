@@ -24,16 +24,15 @@ a:hover {
   border: none;
 }
 
-.btn:focus,.btn:active {
-   outline: none !important;
-   box-shadow: none !important;
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
-
 
 input:active,
 input:focus {
-    outline:0px !important;
-    -webkit-appearance:none;
+  outline: 0px !important;
+  -webkit-appearance: none;
 }
 
 #lone-wolf-total-section,
@@ -84,8 +83,8 @@ section {
 }
 
 #home-plans-section .card {
- margin-bottom: 1rem;
- border: 1px solid #bbc1c5;
+  margin-bottom: 1rem;
+  border: 1px solid #bbc1c5;
 }
 
 #home-plans-section h3 {
@@ -349,7 +348,7 @@ footer {
   background: #212529;
   color: white;
   margin-top: 2rem;
-  padding-top: 2rem;
+  padding: 3rem 0;
 }
 
 .fab {
@@ -367,6 +366,6 @@ footer {
 }
 
 #copyright {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
 }
