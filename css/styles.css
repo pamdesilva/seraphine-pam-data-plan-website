@@ -96,7 +96,16 @@ input:focus {
   color: #E0E0CE;
 }
 
-/************************** LoneWolf page ************************************/
+.jumbotron h1 {
+  font-size: 3.5rem;
+  margin-top: 8rem;
+}
+
+.jumbotron p {
+  font-size: 1.5rem;
+}
+
+/************************** Package pages ************************************/
 #lone-wolf-gb-section .lone-wolf-card,
 #chatterbox-gb-section .chatterbox-gb,
 #family-gb-section .family-gb {
@@ -170,6 +179,19 @@ input:focus {
 
   .plan-icon {
     width: 6rem;
+  }
+
+  .jumbotron h1 {
+    font-size: 5rem;
+    margin-top: 0;
+  }
+
+  .jumbotron p {
+    font-size: 2rem;
+  }
+
+  .jumbotron {
+    background-position: 50% 18%;
   }
 }
 
