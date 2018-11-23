@@ -9,6 +9,7 @@
 /************************** Global Styles ************************************/
 body {
   color: #212529;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -55,6 +56,19 @@ input:focus {
   width: 3.5rem;
 }
 
+h1,
+h2 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+nav img {
+  height: 50px;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
 /************************** Home page ************************************/
 #home-plans-section .btn {
   color: white;
@@ -62,6 +76,7 @@ input:focus {
   padding: 0.5rem 1rem;
   font-weight: bold;
   font-size: 1.1rem;
+  width: 100%;
 }
 
 #home-plans-section a {
@@ -71,6 +86,11 @@ input:focus {
 #home-plans-section .card {
  margin-bottom: 1rem;
  border: 1px solid #bbc1c5;
+}
+
+#home-plans-section h3 {
+  color: #671179;
+  font-weight: bold;
 }
 
 #home-lone-wolf-btn {
@@ -97,6 +117,7 @@ input:focus {
 }
 
 .jumbotron h1 {
+  font-family: 'Quicksand', sans-serif;
   font-size: 3.5rem;
   margin-top: 8rem;
 }
@@ -118,7 +139,7 @@ input:focus {
 #chatterbox-gb-section h2,
 #family-gb-section h2,
 #other-plans {
-  margin: 3rem 0;
+  margin: 5rem 0;
 }
 
 #other-plans {
@@ -128,6 +149,7 @@ input:focus {
 
 #other-plans h4 {
   margin-bottom: 2rem;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #other-plans a {
@@ -178,7 +200,7 @@ input:focus {
   }
 
   .plan-icon {
-    width: 6rem;
+    width: 4rem;
   }
 
   .jumbotron h1 {
